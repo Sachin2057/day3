@@ -1,3 +1,5 @@
+# Create a function add_to_json that takes a filename and a dictionary as input. The function should read the JSON data from the file, add the new dictionary to it, 
+# and write the updated data back to the same file.
 import json
 def add_to_json(filename,dict):
     try:
