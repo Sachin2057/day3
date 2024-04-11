@@ -3,6 +3,7 @@
 # individuals who are 18 years or older.
 import pandas as pd
 import logging
+logging.basicConfig(filename="file_handling.log",level=logging.INFO,encoding="utf-8")
 try:
     data=pd.read_csv("sachin.csv")
     logging.info("file opened sucessfully")

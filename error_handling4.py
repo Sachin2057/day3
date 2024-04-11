@@ -2,6 +2,7 @@
 # to handle cases where the age is below 0 or above 120.
 import argparse
 import logging
+logging.basicConfig(filename="error_handling.log",level=logging.DEBUG,encoding="utf-8")
 class InvalidAgeError(Exception):
     def __init__(self):
         self.message="Invalid Age"
@@ -17,5 +18,5 @@ if __name__=="__main__":
         else:
             logging.error(f"Age={age}")
     except InvalidAgeError as e:
-        print(f"An error occured:{e}")
+        logging.error(f"An error occured:{e}")
         

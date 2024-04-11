@@ -2,7 +2,7 @@
 # and write the updated data back to the same file.
 import json
 import logging
-
+logging.basicConfig(filename="file_handling_json.log",level=logging.DEBUG,encoding="utf-8")
 def add_to_json(filename,dict):
     try:
         with open(filename,"r") as f:
