@@ -1,6 +1,7 @@
 # Implement a program that takes user input for a filename, opens the file in read mode, and displays its contents. Handle the 
 # FileNotFoundError and display an error message if the file is not found.
 import argparse
+import logging
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     parser.add_argument('--filename', required=True)
@@ -12,4 +13,4 @@ if __name__=='__main__':
             print(text)
             f.close()
     except FileNotFoundError:
-        print("File not found")
+        logging.error("File not found")

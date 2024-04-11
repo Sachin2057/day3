@@ -1,6 +1,7 @@
 # Write a Python program that takes user input for age. Create a custom exception InvalidAgeError 
 # to handle cases where the age is below 0 or above 120.
 import argparse
+import logging
 class InvalidAgeError(Exception):
     def __init__(self):
         self.message="Invalid Age"
@@ -11,10 +12,10 @@ if __name__=="__main__":
     arg=parser.parse_args()
     age=int(arg.age)
     try:
-        if(age>120 or age>0):
+        if(age>120 or age<0):
             raise InvalidAgeError
         else:
-            print(f"Age={age}")
+            logging.error(f"Age={age}")
     except InvalidAgeError as e:
         print(f"An error occured:{e}")
         

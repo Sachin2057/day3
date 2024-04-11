@@ -1,5 +1,6 @@
 # Create a function search_log that takes a log file and a search keyword as input. The function should find and display all 
 # lines containing the search keyword.
+import logging
 def search_log(file,key_word):
     result=[]
     try:
@@ -12,5 +13,5 @@ def search_log(file,key_word):
             f.close()
         print(result)
     except Exception as e:
-        print("Error occured {e}")
+        logging.error("Error occured {e}")
 search_log("example.log","should")
