@@ -15,3 +15,5 @@ if __name__=='__main__':
             f.close()
     except FileNotFoundError:
         logging.error("File not found")
+    except Exception as e:
+        logging.error(f"{e}")

@@ -9,6 +9,7 @@ try:
     logging.info("file opened sucessfully")
     above_18=data[data["Age"]>=18]
     above_18.to_csv("output.csv",index=False)
+    logging.info("Data dumped")
 except FileNotFoundError:
     logging.error("File not found")
 except Exception as e:

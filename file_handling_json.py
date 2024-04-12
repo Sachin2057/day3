@@ -2,19 +2,22 @@
 # and write the updated data back to the same file.
 import json
 import logging
-logging.basicConfig(filename="file_handling_json.log",level=logging.DEBUG,encoding="utf-8")
+logging.basicConfig(filename="file_handling_jon.log",level=logging.INFO,encoding="utf-8")
 def add_to_json(filename,dict):
     try:
         with open(filename,"r") as f:
             data=json.load(f)
-    except FileNotFoundError:
-        logging.error("File not found")
-    data.append(dict)
-    try:
+        data.append(dict)
+        logging.info("File opened")
+        logging.debug(data)
         with open(filename,"w") as f:
             json.dump(data,f,indent=3)
+        logging.info("Data dumped")
+        logging.debug(data)
     except FileNotFoundError:
         logging.error("File not found")
+    except Exception as e:
+        logging.error(f"{e}")
     
-add_to_json("json_data.json",{"name":"Sachin","age":15})
+add_to_json("json_data.jon",{"name":"Sachin","age":15})
     
