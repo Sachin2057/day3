@@ -1,0 +1,14 @@
+INFO:root:---University Info---
+INFO:root:Name:MIT
+INFO:root:Location:Massachusetts
+INFO:root:The departments in university are:
+INFO:root:Department:Engineering
+INFO:root:Department:Applied Science
+INFO:root:---Department info---
+INFO:root:University:MIT
+INFO:root:Locaion:Massachusetts
+INFO:root:Department Name:Engineering
+INFO:root:The courses of the deaprtment are:
+INFO:root:Computer
+INFO:root:Mechanical
+INFO:root:Eectronics
