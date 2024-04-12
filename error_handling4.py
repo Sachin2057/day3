@@ -16,7 +16,7 @@ if __name__=="__main__":
         if(age>120 or age<0):
             raise InvalidAgeError
         else:
-            logging.error(f"Age={age}")
+            logging.debug(f"Age={age}")
     except InvalidAgeError as e:
         logging.error(f"An error occured:{e}")
         
